@@ -28,14 +28,8 @@
 /// @n Consider the Evaluation or Commercial editions for professionals or organisations and for commercial usage
 ///
 
-#include "Dummy.h"
 
 // Configuration
-#include "hV_Configuration.h"
-
-#if (hV_CONFIGURATION_RELEASE < 600)
-#error Required hV_CONFIGURATION_RELEASE 600
-#endif // hV_CONFIGURATION_RELEASE
 
 #ifndef SCREEN_EPD_EXT3_RELEASE
 ///
@@ -44,7 +38,13 @@
 #define SCREEN_EPD_EXT3_RELEASE 602
 
 // Other libraries
+#include "Dummy.h"
 #include "hV_Screen_Buffer.h"
+#include "hV_Configuration.h"
+
+#if (hV_CONFIGURATION_RELEASE < 600)
+#error Required hV_CONFIGURATION_RELEASE 600
+#endif // hV_CONFIGURATION_RELEASE
 
 #if (hV_SCREEN_BUFFER_RELEASE < 523)
 #error Required hV_SCREEN_BUFFER_RELEASE 523

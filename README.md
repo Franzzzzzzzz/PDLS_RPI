@@ -5,14 +5,15 @@
 This repository modifies the [Pervasive Displays API](https://github.com/rei-vilo/PDLS_EXT3_Basic) (basic edition, CC-BY-SA) to include several new features:
 - Use with Raspberry Pi 3B single board computer
 - Display to standard video output using [Simple DirectMedia Layer 2](https://www.libsdl.org/), for immediate visualisation of the expected display. 
+- Format text using [Freetype](https://freetype.org/), allowing use of any font. 
 - Additional quality of life functions. 
 
 ## Compilation
 For compilation for standard computer (without eInk display), use:
-`g++ -o Demo *.cpp -lSDL2`.
+`g++ -o Demo *.cpp -lSDL2  -I/usr/include/freetype2 -lfreetype`.
 
 For compilation on Raspberry Pi (with eInk display), the additional define `RPI` must be set:
-`g++ -o Demo *.cpp -DRPI -lSDL2 -lspidev-lib++ -lwiringPi`
+`g++ -o Demo *.cpp -DRPI -lSDL2 -lspidev-lib++ -lwiringPi -I/usr/include/freetype2 -lfreetype`
 
 All compilation requires the libsdl2 (eg. : `sudo apt install libsdl2-dev`).
 Running on Raspberry Pi requires in addition the [wiringPi](http://wiringpi.com/) library and the [spidev-lib](https://github.com/milekium/spidev-lib) library. 
@@ -40,9 +41,9 @@ Any other screen requires modification of the code to work, as the screen size i
 4. If you are connected to a headless RPI, you probably need an display connection of SDL may have issues. In ssh, you can use `ssh -X ...`. Check how to set up a X display through ssh to see how that can be achieved. 
 5. The compiled program needs to be run as root to have access to SPI communication and GPIO: `sudo ./Demo`. There are probably ways to give the appropriate rights to avoid running as root...
 
-
-
-
+## Usefull supplementary functions
+- ` Sierpinski`
+- `Paragraph_freetype (int fontsize, int x0, int y0, int line_end_x, int ymax, String s, uint16_t colour, uint16_t bgcolor=myColours.white)`: display text in a given bounding box (4 ints in the middle), width a given fontsize and colour. Supports newlines (`\n`), italic and bold using markdown syntax (`*word*`or `_word_`, `**word**`or `__word__`). The fonts can be changed in the `Functions.cpp` file.  
 
 
 
