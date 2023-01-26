@@ -22,7 +22,7 @@
 /// @n Consider the Evaluation or Commercial editions for professionals or organisations and for commercial usage
 ///
 
-#include "Dummy.h"
+#include "Functions.h"
 
 #ifndef hV_SCREEN_BUFFER_RELEASE
 ///
@@ -46,8 +46,8 @@
 ///
 /// @brief Generic class for buffered LCD
 ///
-#warning USE_hV_SCREEN == USE_hV_SCREEN_SELF
-#warning FONT_MODE == USE_FONT_TERMINAL
+//#warning USE_hV_SCREEN == USE_hV_SCREEN_SELF
+//#warning FONT_MODE == USE_FONT_TERMINAL
 class hV_Screen_Buffer : protected hV_Font_Terminal
 {
   public:

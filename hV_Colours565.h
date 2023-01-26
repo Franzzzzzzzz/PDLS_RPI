@@ -13,7 +13,7 @@
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 ///
 
-#include "Dummy.h"
+#include "Functions.h"
 
 #ifndef hV_COLOURS_RELEASE
 ///

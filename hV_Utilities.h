@@ -22,7 +22,7 @@
 /// @n Consider the Evaluation or Commercial editions for professionals or organisations and for commercial usage
 ///
 
-#include "Dummy.h"
+#include "Functions.h"
 
 #ifndef hV_UTILITIES_RELEASE
 ///

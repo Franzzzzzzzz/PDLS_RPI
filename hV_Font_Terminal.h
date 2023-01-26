@@ -25,7 +25,7 @@
 /// MikroeElektronika 2011 http://www.mikroe.com
 ///
 
-#include "Dummy.h"
+#include "Functions.h"
 
 // Configuration
 #include "hV_Configuration.h"

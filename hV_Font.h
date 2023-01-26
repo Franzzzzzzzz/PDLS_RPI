@@ -35,7 +35,7 @@
 /// - Flash the compiled Fonts_3.hex on the external SPI Flash with Segger J-Flash or similar
 ///
 
-#include "Dummy.h"
+#include "Functions.h"
 
 // Configuration
 #include "hV_Configuration.h"
